@@ -20,6 +20,7 @@ class CfdiPagination(PageNumberPagination):
                 'next': self.get_next_link(),
                 'previous': self.get_previous_link()
             },
+            'total_pages': self.page.paginator.num_pages,
             'total': self.page.paginator.count,
             'page': int(self.request.GET.get('page', DEFAULT_PAGE)), # can not set default = self.page
             'page_size': int(self.request.GET.get('page_size', self.page_size)),
