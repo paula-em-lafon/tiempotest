@@ -1,0 +1,5 @@
+./venv
+*.pyc
+*~
+*.swp
+facturame/db.sqlite3
